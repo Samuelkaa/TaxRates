@@ -1,0 +1,12 @@
+{
+  "Author": "Samuelka",
+  "Name": "Tax Rates",
+  "Punchline": "Show retainer tax rates in all cities.",
+  "Description": "Show retainer tax rate in all cities. Use /taxes to open.",
+  "InternalName": "TaxRates",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "tax",
+    "retainer"
+  ]
+}
