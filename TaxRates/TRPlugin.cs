@@ -57,13 +57,21 @@ namespace TaxRates
             });
 
             this.PluginInterface.UiBuilder.Draw += DrawUI;
-            this.PluginInterface.UiBuilder.OpenConfigUi += DrawConfigUI;
         }
 
         public void Dispose()
         {
             this.PluginUi.Dispose();
+            Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool dispose)
+        {
+            if (dispose)
+            {
+                this.PluginInterface.UiBuilder.Draw -= DrawUI;
+            }
         }
 
         private void OnCommand(string command, string args)
@@ -75,11 +83,6 @@ namespace TaxRates
         private void DrawUI()
         {
             this.PluginUi.Draw();
-        }
-
-        private void DrawConfigUI()
-        {
-            this.PluginUi.Visible = !this.PluginUi.Visible;
         }
 
         private void IconsInit()

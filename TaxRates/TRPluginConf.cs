@@ -11,7 +11,6 @@ namespace TaxRates
 
         public bool CrossWorld { get; set; }
 
-        public bool SomePropertyToBeSavedAndWithADefault { get; set; } = true;
 
         // the below exist just to make saving less cumbersome
 
